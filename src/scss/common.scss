@@ -17,7 +17,7 @@
 			width: 328px;
 			margin-top: 100px;
 
-			@media (max-width:$tablet) {
+			@media (max-width: em(1111)) {
 				display: none;
 			}
 		}

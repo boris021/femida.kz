@@ -100,7 +100,7 @@ flsForms.formSubmit();
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /*
@@ -184,7 +184,7 @@ flsScroll.stickyBlock();
 
 /* Динамический адаптив */
 // Документация: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
