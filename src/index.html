@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="main">
+				<div class="main__container">
+					<div class="main__body">
+						<div class="main__body-content content-body">
+							<h1 class="content-body__title">Юридические услуги
+								<span>частного адвоката</span> в Алматы</h1>
+							<div class="content-body__subtitle">Юридический центр <strong>“Фемида”</strong> - это адвокаты
+								имеющие большой опыт
+								в различных сферах юриспруденции. Основными направлениями нашего центра является уголовное,
+								гражданское, административное законодательство.</div>
+							<div class="content-body__text">Мы знаем, чем помочь клиенту!</div>
+							<a href="#" class="content-body__btn button">Бесплатная консультация</a>
+						</div>
+						<div class="main__body-image">
+							<img src="@img/main/main-femida.png" alt="main-femida">
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
