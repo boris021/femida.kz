@@ -546,7 +546,6 @@
 
 // callback ========================================================================================================================================================
 .callback {
-	margin-bottom: 200px;
 	background-color: #EED686;
 	@include adaptiveValue("padding-top", 40, 20);
 	@include adaptiveValue("padding-bottom", 40, 20);
@@ -654,6 +653,107 @@
 				& a {
 					display: inline-flex;
 				}
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+.about {
+	margin-bottom: 200px;
+	@include adaptiveValue("padding-top", 80, 30);
+	@include adaptiveValue("padding-bottom", 80, 30);
+
+	// .about__container
+	&__container {}
+
+	// .about__title
+	&__title {
+		@include adaptiveValue("margin-bottom", 40, 30);
+	}
+
+	// .about__body
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	// .about__img
+	&__img {
+		flex: 0 1 50%;
+		padding-right: 20px;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	// .about__image-ibg
+	&__image-ibg {}
+
+	// .about__content
+	&__content {
+		flex: 0 1 50%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 100%;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+	}
+
+	// .about__content-btn
+	&__content-btn {
+		display: inline-flex;
+		@include adaptiveValue("margin-bottom", 40, 20);
+		margin-top: 20px;
+
+		@media (max-width:$tablet) {
+			margin-top: 0;
+		}
+	}
+
+	// .about__content-icons
+	&__content-icons {
+		display: flex;
+		align-items: center;
+		// justify-content: space-between;
+	}
+}
+
+.icons-about {
+
+	// .icons-about__item
+	&__item {
+		background: #F0F0F0;
+		border-radius: 30px;
+		padding: 8px 14px;
+		@include adaptiveValue("margin-right", 30, 10);
+		transition: box-shadow 0.3s ease 0s;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+		}
+
+		& img {
+			margin-right: 5px;
+			transition: all 0.4s ease 0s;
+
+			&:hover {
+				transform: rotate(360deg);
 			}
 		}
 	}
