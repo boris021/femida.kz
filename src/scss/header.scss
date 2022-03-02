@@ -1,5 +1,6 @@
 //====================================================================================================
 .header {
+	z-index: 5;
 	background: #F8F8F9;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	padding: rem(20) 0;
@@ -47,7 +48,7 @@
 			display: none;
 		}
 
-		@media (max-width:$tablet) {
+		@media (max-width:$mobile) {
 			display: block;
 			margin-top: rem(20);
 			padding: rem(20) 0;
@@ -244,69 +245,5 @@
 				transform: rotate(45deg);
 			}
 		}
-	}
-}
-
-// number ========================================================================================================================================================
-.number {
-	@include adaptiveValue("margin-bottom", 80, 20);
-
-	// .number__container
-	&__container {}
-
-	// .number__body
-	&__body {
-		background: #FFFFFF;
-		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-		border-radius: 10px;
-		@include adaptiveValue("margin-top", 52, 20);
-		padding: rem(20) 0;
-		@include adaptiveValue("padding-left", 77, 20);
-		@include adaptiveValue("padding-right", 77, 20);
-	}
-
-	// .number__body-block
-	&__body-block {}
-}
-
-.block-body {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	flex-wrap: wrap;
-
-	// .block-body__item
-	&__item {
-		margin-right: 20px;
-
-		@media (max-width:$tablet) {
-			flex: 0 1 50%;
-			margin: 0 0 rem(20) 0;
-		}
-
-		@media (max-width:$mobile) {
-			flex: 1 1 100%;
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-
-	// .block-body__item-title
-	&__item-title {
-		font-weight: 600;
-		font-size: 30px;
-
-		& span {
-			font-weight: 600;
-			font-size: 50px;
-			color: #54737D;
-		}
-	}
-
-	// .block-body__item-subtitle
-	&__item-subtitle {
-		line-height: math.div(17, 14);
 	}
 }

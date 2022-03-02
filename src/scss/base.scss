@@ -142,3 +142,10 @@
 		display: none;
 	}
 }
+
+.title {
+	font-weight: 600;
+	@include adaptiveValue("font-size", 30, 24);
+	line-height: math.div(37, 30);
+	text-align: center;
+}
