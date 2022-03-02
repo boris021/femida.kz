@@ -80,7 +80,8 @@
 					</div>
 					<div class="services__body-block">
 						<div class="services__body-block-item">
-							<div class="services__body-block-title"><strong>Экономические, хозяйственные споры </strong> между
+							<div class="item-services-title">Экономические, хозяйственные споры </div>
+							<div class="services__body-block-title">Между
 								хозяйствующими субъектами, эффективное взыскание долгов, земельные споры, наследственные дела,
 								представление интересов в судах Российской Федерации по всем видам споров</div>
 						</div>
@@ -115,7 +116,30 @@
 								офис для встречи с клиентом, не нужно переезжать из одного суда в другой для участия в судебных
 								процессах. В результате в выигрыше оказываются наши Клиенты!</p>
 						</div>
-						<div class="chek__body-forms">форма</div>
+						<div class="chek__body-forms forms-chek">
+							<div class="forms-chek__title">Оставить заявку</div>
+							<form action="#" class="form">
+								<div class="label">
+									<div class="group-form">
+										<input autocomplete="off" type="text" data-error="Вы не ввели имя" data-required="text"
+											placeholder="Ваше имя" class="input _req">
+									</div>
+									<div class="group-form">
+										<input autocomplete="off" type="tel" data-error="Не верно введен номер телефона"
+											data-required="tel" placeholder="Ваш номер телефона" class="input _phone _req">
+									</div>
+								</div>
+								<div class="checkbox">
+									<input id="formAgreement" data-required="checkbox" checked type="checkbox" name="agreement"
+										class="checkbox__input _req" data-error="Вы не дали согласние на обраобтку данных">
+									<label for="formAgreement" class="checkbox__label">
+										<span>Даю согласие на обработку моих
+											<a href="#" class="_popup-link">персональных данных</a>
+										</span></label>
+								</div>
+								<button type="submit" class="chek-btn button">Оставить заявку</button>
+							</form>
+						</div>
 					</div>
 					<h2 class="prise__title title">Средняя стоимость
 						наших юридических услуг</h2>
@@ -143,10 +167,12 @@
 						</div>
 						<div class="prise__body__image-ibg"><img src="@img/chield.png" alt="chield"></div>
 					</div>
-
 				</div>
 				<div class="chek__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
 			</section>
+
+			@@include('html/_callback.html',{})
+
 
 		</main>
 		@@include('html/_footer.htm',{})
