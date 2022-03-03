@@ -7,7 +7,9 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, {
+	Navigation
+} from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -19,9 +21,9 @@ EffectFade, Lazy, Manipulation
 // Базовые стили
 import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
-// import 'swiper/css';
+import 'swiper/css';
 
 // Инициализация слайдеров
 function initSliders() {
@@ -103,6 +105,88 @@ function initSliders() {
 			on: {
 
 			}
+		});
+	}
+
+	if (document.querySelector('.swiper-client')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.swiper-client', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 40,
+			autoHeight: true,
+			speed: 800,
+			loop: true,
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.swiper-client-prev',
+				nextEl: '.swiper-client-next',
+			},
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 3,
+					spaceBetween: 40,
+				},
+			},
+		});
+	}
+
+	if (document.querySelector('.swiper-slide-block')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.swiper-slide-block', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 5,
+			spaceBetween: 30,
+			autoHeight: true,
+			speed: 800,
+			loop: true,
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.swiper-slide-block-prev',
+				nextEl: '.swiper-slide-block-next',
+			},
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 5,
+					spaceBetween: 30,
+				},
+			},
 		});
 	}
 }
