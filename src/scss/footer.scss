@@ -1,6 +1,41 @@
 //====================================================================================================
 .footer {
-	padding-top: 200px;
+	background: #164B5C;
+	// height: rem(80);
+
+	// .footer__container
+	&__container {
+		@include adaptiveValue("padding-top", 30, 15);
+		@include adaptiveValue("padding-bottom", 30, 15);
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	// .footer__text
+	&__text {
+		color: #fff;
+		line-height: math.div(20, 14);
+
+		@media (max-width:$tablet) {
+			margin: auto;
+		}
+
+		& a {
+			text-decoration: underline;
+		}
+	}
+
+	// .footer__text-link
+	&__text-link {
+		color: #fff;
+		line-height: math.div(20, 14);
+		margin: auto;
+	}
 }
 
 //====================================================================================================

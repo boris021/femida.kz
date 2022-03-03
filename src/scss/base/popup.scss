@@ -11,9 +11,11 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
+
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -25,16 +27,19 @@ body::after {
 	visibility: hidden;
 	pointer-events: none;
 }
+
 .popup_show {
 	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
+
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -46,6 +51,7 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
+
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
@@ -53,9 +59,37 @@ body::after {
 	background-color: #eee;
 	padding: 20px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 600px;
+	border-radius: 7px;
+
 	.lock & {
 		visibility: visible;
 	}
+}
+
+//========================================================================================================================================================
+.input-popup {
+	width: 100%;
+	padding: 20px 30px;
+	border-radius: 10px;
+	margin-bottom: rem(20);
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.form-popup {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.popup-btn {
+	display: block;
+	width: 100%;
+}
+
+.popup__close {
+	width: 100%;
+	text-align: right;
 }
