@@ -1,17 +1,24 @@
 <header class="header">
 	<div class="header__container">
 		<div class="header__body">
-			<a href="" class="header__body-logo"><img src="@img/logo.svg" alt="logo"></a>
+			<a href="#" data-goto=".main" class="header__body-logo"><img src="@img/logo.svg" alt="logo"></a>
 			<div class="header__menu menu">
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 				<nav class="menu__body">
 					<ul class="menu__list">
-						<li class="menu__item"><a href="" class="menu__link">Главная</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Виды услуг</a></li>
-						<li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-						<li class="menu__item"><a href="" class="menu__link">FAQ</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
-						<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+						<li class="menu__item"><a href="#" data-goto-header data-goto=".main" class="menu__link">Главная</a>
+						</li>
+						<li class="menu__item"><a href="#" data-goto-header data-goto=".services" class="menu__link">Виды
+								услуг</a>
+						</li>
+						<li class="menu__item"><a href="#" data-goto-header data-goto=".about" class="menu__link">О нас</a>
+						</li>
+						<li class="menu__item"><a href="#" data-goto-header data-goto=".question" class="menu__link">FAQ</a>
+						</li>
+						<li class="menu__item"><a href="#" data-goto-header data-goto=".client" class="menu__link">Отзывы</a>
+						</li>
+						<li class="menu__item"><a href="#" data-goto-header data-goto=".contact"
+								class="menu__link">Контакты</a></li>
 					</ul>
 				</nav>
 			</div>

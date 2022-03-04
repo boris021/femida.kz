@@ -8,7 +8,9 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper, {
-	Navigation
+	Navigation,
+	Pagination,
+	Autoplay
 } from 'swiper';
 /*
 Основниые модули слайдера:
@@ -48,14 +50,14 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 
 			// Пагинация
 			/*
@@ -113,7 +115,10 @@ function initSliders() {
 		new Swiper('.swiper-client', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation,
+				Pagination,
+				Autoplay
+			],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
@@ -125,6 +130,14 @@ function initSliders() {
 			navigation: {
 				prevEl: '.swiper-client-prev',
 				nextEl: '.swiper-client-next',
+			},
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
 			},
 			// Брейкпоинты
 			breakpoints: {
@@ -154,7 +167,10 @@ function initSliders() {
 		new Swiper('.swiper-slide-block', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation,
+				Pagination,
+				Autoplay
+			],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 5,
@@ -166,6 +182,14 @@ function initSliders() {
 			navigation: {
 				prevEl: '.swiper-slide-block-prev',
 				nextEl: '.swiper-slide-block-next',
+			},
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
 			},
 			// Брейкпоинты
 			breakpoints: {

@@ -9,7 +9,7 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 
-			<section class="main">
+			<section data-watch="navigator" class="main">
 				<div class="main__container">
 					<div class="main__body">
 						<div class="main__body-content content-body">
@@ -58,7 +58,7 @@
 				</div>
 			</section>
 
-			<section class="services">
+			<section data-watch="navigator" class="services">
 				<div class="services__container">
 					<div class="services__title title">Популярные услуги</div>
 					<div class="services__body">
@@ -90,7 +90,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="servise__image-ibg">
+				<div class="servis__image-ibg">
 					<img src="@img/services/services-bg.svg" alt="services">
 				</div>
 			</section>
@@ -173,7 +173,7 @@
 
 			@@include('html/_callback.html',{})
 
-			<section class="about">
+			<section data-watch="navigator" class="about">
 				<div class="about__container">
 					<h2 class="about__title title">О нас</h2>
 					<div class="about__body">
@@ -253,7 +253,7 @@
 
 			@@include('html/_callback.html',{})
 
-			<section class="client">
+			<section data-watch="navigator" class="client">
 				<div class="client__container">
 					<h2 class="client__title title">Более 400 довольных клиентов</h2>
 					<div class="client__body">
@@ -268,13 +268,12 @@
 								<div class="client__slide swiper-slide">
 									<img src="@img/slider/sl1.jpg" alt="" class="client__image-ibg">
 								</div>
-
 								<div class="client__slide swiper-slide">
 									<img src="@img/slider/sl1.jpg" alt="" class="client__image-ibg">
 								</div>
-
-
 							</div>
+
+							<div class="swiper-pagination"></div>
 						</div>
 						<div class="client-arrows">
 							<button type="button" class="swiper-client-prev">
@@ -317,6 +316,9 @@
 								<img src="@img/slider/arrow-right.svg" alt="">
 							</button>
 						</div>
+
+						<div class="swiper-pagination"></div>
+
 					</div>
 				</div>
 				<div class="cln__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
@@ -417,7 +419,7 @@
 
 			@@include('html/_callback.html',{})
 
-			<section class="question">
+			<section data-watch="navigator" class="question">
 				<div class="question__container">
 					<h2 class="question__title title">Ответы на часто задаваемые вопросы</h2>
 					<div class="question__body">
@@ -453,7 +455,7 @@
 				<div class="question__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
 			</section>
 
-			<section class="contact">
+			<section data-watch="navigator" class="contact">
 				<div class="contact__container">
 					<h2 class="question__title title">Наши контакты</h2>
 					<div class="contact__body">
@@ -486,8 +488,9 @@
 									style="color:#eee;font-size:12px;position:absolute;top:0px;">Усть‑Каменогорск</a><a
 									href="https://yandex.kz/maps/geo/53168272/?ll=82.636859%2C49.962655&utm_medium=mapframe&utm_source=maps&z=11.32"
 									style="color:#eee;font-size:12px;position:absolute;top:14px;">Усть-Каменогорск —
-									Яндекс Карты</a><iframe src="https://yandex.kz/map-widget/v1/-/CCU578cJXD" width="100%"
-									height="476" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+									Яндекс Карты</a><iframe style="pointer-events: none;"
+									src="https://yandex.kz/map-widget/v1/-/CCU578cJXD" width="100%" height="476" frameborder="1"
+									allowfullscreen="true" style="position:relative;"></iframe>
 							</div>
 						</div>
 					</div>
@@ -501,6 +504,8 @@
 	</div>
 	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>

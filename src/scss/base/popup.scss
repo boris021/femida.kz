@@ -67,6 +67,22 @@ body::after {
 	}
 }
 
+.popup-policy {
+	text-align: center;
+	margin-top: 20px;
+	line-height: math.div(19, 14);
+}
+
+.policy {
+	&_popup-link {
+		text-decoration: none;
+	}
+}
+
+.popup-callback {
+	text-align: center;
+}
+
 //========================================================================================================================================================
 .input-popup {
 	width: 100%;
@@ -82,6 +98,13 @@ body::after {
 	align-items: center;
 	flex-direction: column;
 	margin: 20px;
+
+	&__title {
+		@include adaptiveValue("font-size", 30, 24);
+		font-weight: 700;
+		@include adaptiveValue("margin-bottom", 30, 20);
+		text-align: center;
+	}
 }
 
 .popup-btn {
@@ -92,4 +115,34 @@ body::after {
 .popup__close {
 	width: 100%;
 	text-align: right;
+}
+
+// policy ========================================================================================================================================================
+.popup {
+
+	h3 {
+		text-align: center;
+		font-weight: 700;
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+
+	// .popup__text
+	&__text {
+
+		a {
+			color: blue;
+			text-decoration: underline;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: math.div(22, 14);
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.popup__content-policy {
+	max-width: 900px;
 }
