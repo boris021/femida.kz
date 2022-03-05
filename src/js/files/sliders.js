@@ -9,7 +9,6 @@
 // Пример: { Navigation, Autoplay }
 import Swiper, {
 	Navigation,
-	Pagination,
 	Autoplay
 } from 'swiper';
 /*
@@ -116,7 +115,6 @@ function initSliders() {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation,
-				Pagination,
 				Autoplay
 			],
 			observer: true,
@@ -134,10 +132,6 @@ function initSliders() {
 			autoplay: {
 				delay: 2500,
 				disableOnInteraction: false,
-			},
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
 			},
 			// Брейкпоинты
 			breakpoints: {
@@ -168,7 +162,6 @@ function initSliders() {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation,
-				Pagination,
 				Autoplay
 			],
 			observer: true,
