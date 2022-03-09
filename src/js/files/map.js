@@ -1,4 +1,4 @@
-
+/*
 function mapAdd() {
 	let tag = document.createElement('script');
 	tag.src = "https://maps.google.com/maps/api/js?sensor=false&amp;key=&callback=mapInit";
@@ -80,9 +80,10 @@ if (document.querySelector('#map')) {
 }
 
 
-/* YA
+
 function map(n) {
 	ymaps.ready(init);
+
 	function init() {
 		// Создание карты.
 		var myMap = new ymaps.Map("map", {
@@ -97,8 +98,7 @@ function map(n) {
 			zoom: 10
 		});
 
-		let myPlacemark = new ymaps.Placemark([43.585525, 39.723062], {
-		},{
+		let myPlacemark = new ymaps.Placemark([43.585525, 39.723062], {}, {
 			// Опции.
 			//balloonContentHeader: 'Mistoun',
 			//balloonContentBody: 'Москва, Николоямская 40с1',
@@ -125,5 +125,4 @@ function map(n) {
 		myMap.behaviors.disable('scrollZoom');
 		myMap.behaviors.disable('drag');
 	}
-}
-*/
+}/*

@@ -502,10 +502,11 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		background-color: #164B5C;
+		// background-color: #164B5C;
+		background: url(../img/checked.svg) center center no-repeat;
 		border-radius: 4px;
-		border: 2px solid #164B5C;
-
+		background-size: contain;
+		// border: 1px solid #164B5C;
 		transform: scale(0);
 	}
 
@@ -1362,4 +1363,9 @@
 		font-size: 16px;
 		line-height: math.div(20, 16);
 	}
+}
+
+.map {
+	width: 500px;
+	height: 500px;
 }

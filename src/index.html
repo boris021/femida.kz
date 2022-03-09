@@ -49,10 +49,6 @@
 								<div class="block-body__item-subtitle">взыскание страхового <br>
 									возмещения, неустойки и штрафов</div>
 							</div>
-							<div class="block-body__item">
-								<div class="block-body__item-title">№<span>1</span></div>
-								<div class="block-body__item-subtitle">в рейтинге <br> адвокатов</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -121,11 +117,11 @@
 							<form action="#" class="form">
 								<div class="label">
 									<div class="group-form">
-										<input autocomplete="off" type="text" data-error="Вы не ввели имя" data-required="text"
+										<input autocomplete="off" type="text" data-error="Ошибка Введите имя" data-required="text"
 											placeholder="Ваше имя" class="input _req">
 									</div>
 									<div class="group-form">
-										<input autocomplete="off" type="tel" data-error="Не верно введен номер телефона"
+										<input autocomplete="off" type="tel" data-error="Ошибка Введите номер телефона"
 											data-required="tel" placeholder="Ваш номер телефона" class="input _phone _req">
 									</div>
 								</div>
@@ -478,16 +474,8 @@
 								консультацию</a>
 						</div>
 
-						<div class="contact__body-map">
-							<div style="position:relative;overflow:hidden;"><a
-									href="https://yandex.kz/maps/10306/ust-kamenogorsk/?utm_medium=mapframe&utm_source=maps"
-									style="color:#eee;font-size:12px;position:absolute;top:0px;">Усть‑Каменогорск</a><a
-									href="https://yandex.kz/maps/geo/53168272/?ll=82.636859%2C49.962655&utm_medium=mapframe&utm_source=maps&z=11.32"
-									style="color:#eee;font-size:12px;position:absolute;top:14px;">Усть-Каменогорск —
-									Яндекс Карты</a><iframe style="pointer-events: none;"
-									src="https://yandex.kz/map-widget/v1/-/CCU578cJXD" width="100%" height="476" frameborder="1"
-									allowfullscreen="true" style="position:relative;"></iframe>
-							</div>
+						<div id="map-test" class="contact__body-map map">
+
 						</div>
 					</div>
 				</div>
@@ -501,6 +489,9 @@
 	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=f0f96f2c-9220-4c32-b651-23ccc1413006
+	&lang=ru_RU"></script>
+	<script src="js/maps.js"></script>
 
 </body>
 
