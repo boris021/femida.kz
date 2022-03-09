@@ -4,8 +4,17 @@
 // Сниппет (HTML): pl
 
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, bodyLockStatus, bodyLock, bodyUnlock, bodyLockToggle, FLS } from "../files/functions.js";
-import { flsModules } from "../files/modules.js";
+import {
+	isMobile,
+	bodyLockStatus,
+	bodyLock,
+	bodyUnlock,
+	bodyLockToggle,
+	FLS
+} from "../files/functions.js";
+import {
+	flsModules
+} from "../files/modules.js";
 
 // Класс Popup
 class Popup {
@@ -38,10 +47,10 @@ class Popup {
 				goHash: true, // Переход по наличию в адресной строке
 			},
 			on: { // События
-				beforeOpen: function () { },
-				afterOpen: function () { },
-				beforeClose: function () { },
-				afterClose: function () { },
+				beforeOpen: function () {},
+				afterOpen: function () {},
+				beforeClose: function () {},
+				afterClose: function () {},
 			},
 		}
 		this.youTubeCode;
@@ -85,18 +94,7 @@ class Popup {
 		this.options = {
 			...config,
 			...options,
-			classes: {
-				...config.classes,
-				...options?.classes,
-			},
-			hashSettings: {
-				...config.hashSettings,
-				...options?.hashSettings,
-			},
-			on: {
-				...config.on,
-				...options?.on,
-			}
+
 		}
 		this.bodyLock = false;
 		this.options.init ? this.initPopups() : null
@@ -225,8 +223,7 @@ class Popup {
 
 				if (!this._reopen) {
 					!this.bodyLock ? bodyLock() : null;
-				}
-				else this._reopen = false;
+				} else this._reopen = false;
 
 				this.targetOpen.element.setAttribute('aria-hidden', 'false');
 
@@ -316,7 +313,7 @@ class Popup {
 	_openToHash() {
 		let classInHash = document.querySelector(`.${window.location.hash.replace('#', '')}`) ? `.${window.location.hash.replace('#', '')}` :
 			document.querySelector(`${window.location.hash}`) ? `${window.location.hash}` :
-				null;
+			null;
 
 		const buttons = document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) ? document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) : document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash.replace('.', "#")}"]`);
 		if (buttons && classInHash) this.open(classInHash);

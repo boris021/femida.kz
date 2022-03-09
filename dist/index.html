@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/_head.htm',{
-"title":"Юридические услуги частного адвоката в Алматы"
-})
+
+<head>
+	<title>Юридические услуги частного адвоката в Алматы</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220310002518">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="#" data-goto=".main" class="header__body-logo"><img src="img/logo.svg" alt="logo"></a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#" data-goto-header data-goto=".main" class="menu__link">Главная</a>
+								</li>
+								<li class="menu__item"><a href="#" data-goto-header data-goto=".services" class="menu__link">Виды
+										услуг</a>
+								</li>
+								<li class="menu__item"><a href="#" data-goto-header data-goto=".about" class="menu__link">О нас</a>
+								</li>
+								<li class="menu__item"><a href="#" data-goto-header data-goto=".question" class="menu__link">FAQ</a>
+								</li>
+								<li class="menu__item"><a href="#" data-goto-header data-goto=".client" class="menu__link">Отзывы</a>
+								</li>
+								<li class="menu__item"><a href="#" data-goto-header data-goto=".contact" class="menu__link">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div data-da=".menu__body,767,1" class="header__body-action">
+						<a href="tel:+77777642704" class="header__body-phone">+7 (777) 764-27-04</a>
+						<span class="header__body-clock">Ежедневно с 09:00 до 18:00</span>
+					</div>
+					<a data-da=".menu__body,767,2" href="#" data-popup="#popup" class="header__body-btn button">Оставить заявку</a>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 
 			<section data-watch="navigator" class="main">
@@ -14,7 +52,8 @@
 					<div class="main__body">
 						<div class="main__body-content content-body">
 							<h1 class="content-body__title">Юридические услуги
-								<span>частного адвоката</span> в Алматы</h1>
+								<span>частного адвоката</span> в Алматы
+							</h1>
 							<div class="content-body__subtitle">Юридический центр <strong>“Фемида”</strong> - это адвокаты
 								имеющие большой опыт
 								в различных сферах юриспруденции. Основными направлениями нашего центра является уголовное,
@@ -23,12 +62,12 @@
 							<a href="#" data-popup="#popup" class="content-body__btn button">Бесплатная консультация</a>
 						</div>
 						<div class="main__body-image">
-							<img src="@img/main/main-femida.png" alt="main-femida">
+							<picture><source srcset="img/main/main-femida.webp" type="image/webp"><img src="img/main/main-femida.png" alt="main-femida"></picture>
 						</div>
 
 					</div>
 				</div>
-				<div class="main__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
+				<div class="main__image-ibg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.jpg" alt="bg"></picture></div>
 			</section>
 
 			<section class="number">
@@ -87,7 +126,7 @@
 					</div>
 				</div>
 				<div class="servis__image-ibg">
-					<img src="@img/services/services-bg.svg" alt="services">
+					<img src="img/services/services-bg.svg" alt="services">
 				</div>
 			</section>
 
@@ -114,21 +153,17 @@
 						</div>
 						<div class="chek__body-forms forms-chek">
 							<div class="forms-chek__title">Оставить заявку</div>
-							<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST"
-								class="form">
+							<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST" class="form">
 								<div class="label">
 									<div class="group-form">
-										<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя"
-											data-required="text" placeholder="Ваше имя" class="input _req">
+										<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя" data-required="text" placeholder="Ваше имя" class="input _req">
 									</div>
 									<div class="group-form">
-										<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона"
-											data-required="tel" placeholder="Ваш номер телефона" class="input tel _req">
+										<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона" data-required="tel" placeholder="Ваш номер телефона" class="input tel _req">
 									</div>
 								</div>
 								<div class="checkbox">
-									<input id="formAgreement" data-required="checkbox" checked type="checkbox" name="agreement"
-										class="checkbox__input _req" data-error="Вы не дали согласние на обраобтку данных">
+									<input id="formAgreement" data-required="checkbox" checked type="checkbox" name="agreement" class="checkbox__input _req" data-error="Вы не дали согласние на обраобтку данных">
 									<label for="formAgreement" class="checkbox__label">
 										<span>Даю согласие на обработку моих
 											<a href="img/policy.pdf" target="_blank" class="_popup-link">персональных данных</a>
@@ -162,20 +197,43 @@
 								правонарушениях </div>
 							<div class="prise__body-item-money">от 200 000 тг</div>
 						</div>
-						<div class="prise__body__image-ibg"><img src="@img/chield.png" alt="chield"></div>
+						<div class="prise__body__image-ibg"><picture><source srcset="img/chield.webp" type="image/webp"><img src="img/chield.png" alt="chield"></picture></div>
 					</div>
 				</div>
-				<div class="chek__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
+				<div class="chek__image-ibg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.jpg" alt="bg"></picture></div>
 			</section>
 
-			@@include('html/_callback.html',{})
+			<section class="callback">
+				<div class="callback__container">
+					<div class="callback__title title">Запишитесь на бесплатную консультацию</div>
+					<div class="callback__subtitle subtitle">Мы гарантируем конфидециальность</div>
+					<div class="callback__body">
+						<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST" class="callback__body-form form-callback">
+							<div class="form-callback__block">
+								<div class="form-callback__group">
+									<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя" placeholder="Ваше имя" class="form-callback__input" data-required="text">
+								</div>
+								<div class="form-callback__group">
+									<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона" placeholder="Ваш номер телефона" class="form-callback__input tel" data-required="tel">
+								</div>
+								<button type="submit" class="chek-btn button">Получить консультацию</button>
+							</div>
+						</form>
+						<div class="popup-callback">
+							Оставляя заявку вы соглашаетесь с политикой обработки <a href="img/policy.pdf" target="_blank" class="callback__popup-link">персональных
+								данных</a>
+						</div>
+					</div>
+					<div class="callback__image-ibg"><picture><source srcset="img/hammer.webp" type="image/webp"><img src="img/hammer.png" alt="hammer"></picture></div>
+				</div>
+			</section>
 
 			<section data-watch="navigator" class="about">
 				<div class="about__container">
 					<h2 class="about__title title">О нас</h2>
 					<div class="about__body">
 						<div class="about__img">
-							<img src="@img/about/about-img.jpg" alt="about">
+							<picture><source srcset="img/about/about-img.webp" type="image/webp"><img src="img/about/about-img.jpg" alt="about"></picture>
 						</div>
 						<div class="about__content">
 							<p>Юридический центр «Фемида» была образована в 2000 году. На сегодняшний день Юридический центр
@@ -187,15 +245,15 @@
 								консультацию</a>
 							<div class="about__content-icons icons-about">
 								<a href="#" class="icons-about__item">
-									<img src="@img/about/whatsapp.svg" alt="whatsapp">
+									<img src="img/about/whatsapp.svg" alt="whatsapp">
 									WhatsApp
 								</a>
 								<a href="#" class="icons-about__item">
-									<img src="@img/about/telegram.svg" alt="Telegram">
+									<img src="img/about/telegram.svg" alt="Telegram">
 									Telegram
 								</a>
 								<a href="#" class="icons-about__item">
-									<img src="@img/about/instagram.svg" alt="Instagram">
+									<img src="img/about/instagram.svg" alt="Instagram">
 									Instagram
 								</a>
 							</div>
@@ -207,7 +265,7 @@
 							<div class="item-about__block block-item">
 								<div class="block-item__icon">
 									<div class="block-item__circle"></div>
-									<img src="@img/about/about-item-1.svg" alt="about">
+									<img src="img/about/about-item-1.svg" alt="about">
 								</div>
 								<div class="block-item__text">
 									<div class="block-item__text-title item-title">Обсуждаем задачи онлайн/офлайн</div>
@@ -219,7 +277,7 @@
 							<div class="item-about__block block-item">
 								<div class="block-item__icon">
 									<div class="block-item__circle"></div>
-									<img src="@img/about/about-item-2.svg" alt="about">
+									<img src="img/about/about-item-2.svg" alt="about">
 								</div>
 								<div class="block-item__text">
 									<div class="block-item__text-title item-title">Выбираем наилучший вариант действий</div>
@@ -231,7 +289,7 @@
 							<div class="item-about__block block-item">
 								<div class="block-item__icon">
 									<div class="block-item__circle"></div>
-									<img src="@img/about/about-item-3.svg" alt="about">
+									<img src="img/about/about-item-3.svg" alt="about">
 								</div>
 								<div class="block-item__text">
 									<div class="block-item__text-title item-title">Работаем до получения нужного результата</div>
@@ -241,14 +299,37 @@
 							</div>
 						</div>
 						<div class="about__block__image-ibg">
-							<img src="@img/about/about-img.jpg" alt="about">
+							<picture><source srcset="img/about/about-img.webp" type="image/webp"><img src="img/about/about-img.jpg" alt="about"></picture>
 						</div>
 					</div>
 				</div>
-				<div class="about__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
+				<div class="about__image-ibg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.jpg" alt="bg"></picture></div>
 			</section>
 
-			@@include('html/_callback.html',{})
+			<section class="callback">
+				<div class="callback__container">
+					<div class="callback__title title">Запишитесь на бесплатную консультацию</div>
+					<div class="callback__subtitle subtitle">Мы гарантируем конфидециальность</div>
+					<div class="callback__body">
+						<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST" class="callback__body-form form-callback">
+							<div class="form-callback__block">
+								<div class="form-callback__group">
+									<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя" placeholder="Ваше имя" class="form-callback__input" data-required="text">
+								</div>
+								<div class="form-callback__group">
+									<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона" placeholder="Ваш номер телефона" class="form-callback__input tel" data-required="tel">
+								</div>
+								<button type="submit" class="chek-btn button">Получить консультацию</button>
+							</div>
+						</form>
+						<div class="popup-callback">
+							Оставляя заявку вы соглашаетесь с политикой обработки <a href="img/policy.pdf" target="_blank" class="callback__popup-link">персональных
+								данных</a>
+						</div>
+					</div>
+					<div class="callback__image-ibg"><picture><source srcset="img/hammer.webp" type="image/webp"><img src="img/hammer.png" alt="hammer"></picture></div>
+				</div>
+			</section>
 
 			<section data-watch="navigator" class="client">
 				<div class="client__container">
@@ -260,22 +341,22 @@
 							<div class="client__wrapper swiper-wrapper">
 								<!-- Слайд -->
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/sl1.jpg" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/sl1.webp" type="image/webp"><img src="img/slider/sl1.jpg" alt="" class="client__image-ibg"></picture>
 								</div>
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/sl1.jpg" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/sl1.webp" type="image/webp"><img src="img/slider/sl1.jpg" alt="" class="client__image-ibg"></picture>
 								</div>
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/sl1.jpg" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/sl1.webp" type="image/webp"><img src="img/slider/sl1.jpg" alt="" class="client__image-ibg"></picture>
 								</div>
 							</div>
 						</div>
 						<div class="client-arrows">
 							<button type="button" class="swiper-client-prev">
-								<img src="@img/slider/arrow-left.svg" alt="">
+								<img src="img/slider/arrow-left.svg" alt="">
 							</button>
 							<button type="button" class="swiper-client-next">
-								<img src="@img/slider/arrow-right.svg" alt="">
+								<img src="img/slider/arrow-right.svg" alt="">
 							</button>
 						</div>
 					</div>
@@ -287,37 +368,60 @@
 							<div class="client__wrapper swiper-wrapper">
 								<!-- Слайд -->
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/01.png" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/01.webp" type="image/webp"><img src="img/slider/01.png" alt="" class="client__image-ibg"></picture>
 								</div>
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/02.png" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/02.webp" type="image/webp"><img src="img/slider/02.png" alt="" class="client__image-ibg"></picture>
 								</div>
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/03.png" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/03.webp" type="image/webp"><img src="img/slider/03.png" alt="" class="client__image-ibg"></picture>
 								</div>
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/04.png" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/04.webp" type="image/webp"><img src="img/slider/04.png" alt="" class="client__image-ibg"></picture>
 								</div>
 								<div class="client__slide swiper-slide">
-									<img src="@img/slider/05.png" alt="" class="client__image-ibg">
+									<picture><source srcset="img/slider/05.webp" type="image/webp"><img src="img/slider/05.png" alt="" class="client__image-ibg"></picture>
 								</div>
 							</div>
 						</div>
 						<div class="client-arrows-block">
 							<button type="button" class="swiper-slide-block-prev">
-								<img src="@img/slider/arrow-left.svg" alt="">
+								<img src="img/slider/arrow-left.svg" alt="">
 							</button>
 							<button type="button" class="swiper-slide-block-next">
-								<img src="@img/slider/arrow-right.svg" alt="">
+								<img src="img/slider/arrow-right.svg" alt="">
 							</button>
 						</div>
 
 					</div>
 				</div>
-				<div class="cln__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
+				<div class="cln__image-ibg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.jpg" alt="bg"></picture></div>
 			</section>
 
-			@@include('html/_callback.html',{})
+			<section class="callback">
+				<div class="callback__container">
+					<div class="callback__title title">Запишитесь на бесплатную консультацию</div>
+					<div class="callback__subtitle subtitle">Мы гарантируем конфидециальность</div>
+					<div class="callback__body">
+						<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST" class="callback__body-form form-callback">
+							<div class="form-callback__block">
+								<div class="form-callback__group">
+									<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя" placeholder="Ваше имя" class="form-callback__input" data-required="text">
+								</div>
+								<div class="form-callback__group">
+									<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона" placeholder="Ваш номер телефона" class="form-callback__input tel" data-required="tel">
+								</div>
+								<button type="submit" class="chek-btn button">Получить консультацию</button>
+							</div>
+						</form>
+						<div class="popup-callback">
+							Оставляя заявку вы соглашаетесь с политикой обработки <a href="img/policy.pdf" target="_blank" class="callback__popup-link">персональных
+								данных</a>
+						</div>
+					</div>
+					<div class="callback__image-ibg"><picture><source srcset="img/hammer.webp" type="image/webp"><img src="img/hammer.png" alt="hammer"></picture></div>
+				</div>
+			</section>
 
 			<section class="advokat">
 				<div class="advokat__container">
@@ -328,7 +432,7 @@
 								<div class="item-advokat block-item">
 									<div class="block-item__icon">
 										<div class="block-item__circle"></div>
-										<img src="@img/advokat/item-1.svg" alt="advokat">
+										<img src="img/advokat/item-1.svg" alt="advokat">
 									</div>
 									<div class="advokat-item__text">
 										<div class="block-item__text-subtitle item-subtitle">Индивидуальный подход к
@@ -338,7 +442,7 @@
 								<div class="item-advokat block-item">
 									<div class="block-item__icon">
 										<div class="block-item__circle"></div>
-										<img src="@img/advokat/item-2.svg" alt="advokat">
+										<img src="img/advokat/item-2.svg" alt="advokat">
 									</div>
 									<div class="advokat-item__text">
 										<div class="block-item__text-subtitle item-subtitle">Опыт практической
@@ -348,7 +452,7 @@
 								<div class="item-advokat block-item">
 									<div class="block-item__icon">
 										<div class="block-item__circle"></div>
-										<img src="@img/advokat/item-3.svg" alt="advokat">
+										<img src="img/advokat/item-3.svg" alt="advokat">
 									</div>
 									<div class="advokat-item__text">
 										<div class="block-item__text-subtitle item-subtitle">Возможность получить
@@ -358,7 +462,7 @@
 								<div class="item-advokat block-item">
 									<div class="block-item__icon">
 										<div class="block-item__circle"></div>
-										<img src="@img/advokat/item-4.svg" alt="advokat">
+										<img src="img/advokat/item-4.svg" alt="advokat">
 									</div>
 									<div class="advokat-item__text">
 										<div class="block-item__text-subtitle item-subtitle">Гарантия 100%
@@ -368,7 +472,7 @@
 							</div>
 						</div>
 						<div class="advokat__img-ibg">
-							<img src="@img/advokat/advokat-bg.jpg" alt="advokat">
+							<picture><source srcset="img/advokat/advokat-bg.webp" type="image/webp"><img src="img/advokat/advokat-bg.jpg" alt="advokat"></picture>
 						</div>
 					</div>
 					<h2 class="advokat__card-title title">Как мы можем помочь в решении проблемы</h2>
@@ -378,7 +482,7 @@
 								пресечения с заключения под стражу на залог, ограничение действий, домашний арест или подписку о
 								не выезде</div>
 							<div class="advokat__card__image">
-								<img src="@img/advokat/advokat-item1.png" alt="advokat">
+								<picture><source srcset="img/advokat/advokat-item1.webp" type="image/webp"><img src="img/advokat/advokat-item1.png" alt="advokat"></picture>
 							</div>
 						</div>
 
@@ -387,14 +491,14 @@
 								<div class="advokat__card-item-text-list">Разработаем индивидуальную стратегию защиты, которая
 									приведет к положительному исходу дела</div>
 								<div class="advokat__card__image">
-									<img src="@img/advokat/advokat-item2.png" alt="advokat">
+									<picture><source srcset="img/advokat/advokat-item2.webp" type="image/webp"><img src="img/advokat/advokat-item2.png" alt="advokat"></picture>
 								</div>
 							</div>
 							<div class="advokat__card-list-items">
 								<div class="advokat__card-item-text-list">Добьемся отказа в возбуждении
 									уголовного дела (если на это есть хоть минимальная возможность)</div>
 								<div class="advokat__card__image">
-									<img src="@img/advokat/advokat-item3.png" alt="advokat">
+									<picture><source srcset="img/advokat/advokat-item3.webp" type="image/webp"><img src="img/advokat/advokat-item3.png" alt="advokat"></picture>
 								</div>
 							</div>
 						</div>
@@ -402,15 +506,38 @@
 							<div class="advokat__card-item-text">Возьмем на себя общение с правоохранительными органами по
 								защите ваших интересов</div>
 							<div class="advokat__card__image">
-								<img src="@img/advokat/advokat-item4.png" alt="advokat">
+								<picture><source srcset="img/advokat/advokat-item4.webp" type="image/webp"><img src="img/advokat/advokat-item4.png" alt="advokat"></picture>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="advokat__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
+				<div class="advokat__image-ibg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.jpg" alt="bg"></picture></div>
 			</section>
 
-			@@include('html/_callback.html',{})
+			<section class="callback">
+				<div class="callback__container">
+					<div class="callback__title title">Запишитесь на бесплатную консультацию</div>
+					<div class="callback__subtitle subtitle">Мы гарантируем конфидециальность</div>
+					<div class="callback__body">
+						<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST" class="callback__body-form form-callback">
+							<div class="form-callback__block">
+								<div class="form-callback__group">
+									<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя" placeholder="Ваше имя" class="form-callback__input" data-required="text">
+								</div>
+								<div class="form-callback__group">
+									<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона" placeholder="Ваш номер телефона" class="form-callback__input tel" data-required="tel">
+								</div>
+								<button type="submit" class="chek-btn button">Получить консультацию</button>
+							</div>
+						</form>
+						<div class="popup-callback">
+							Оставляя заявку вы соглашаетесь с политикой обработки <a href="img/policy.pdf" target="_blank" class="callback__popup-link">персональных
+								данных</a>
+						</div>
+					</div>
+					<div class="callback__image-ibg"><picture><source srcset="img/hammer.webp" type="image/webp"><img src="img/hammer.png" alt="hammer"></picture></div>
+				</div>
+			</section>
 
 			<section data-watch="navigator" class="question">
 				<div class="question__container">
@@ -440,12 +567,12 @@
 					</div>
 					<div class="question__actions">
 						<a href="#" class="question__actions-btn buttom">
-							<img src="@img/whatsapp.svg" alt="whatsapp">
+							<img src="img/whatsapp.svg" alt="whatsapp">
 							Задать вопрос прямо сейчас</a>
 						<div class="question__actions-text">Задайте свой вопрос в WhatsApp прямо сейчас</div>
 					</div>
 				</div>
-				<div class="question__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
+				<div class="question__image-ibg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.jpg" alt="bg"></picture></div>
 			</section>
 
 			<section data-watch="navigator" class="contact">
@@ -476,25 +603,120 @@
 						</div>
 
 						<div id="map-test" class="contact__body-map map">
-							<script type="text/javascript" charset="utf-8" async
-								src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d7fe7ce325d36001a143ad72b199c70329b2d037595bd1f0b1f3ab238009c14&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false">
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d7fe7ce325d36001a143ad72b199c70329b2d037595bd1f0b1f3ab238009c14&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false&_v=20220310002518">
 							</script>
 						</div>
 					</div>
 				</div>
-				<div class="contact__image-ibg"><img src="@img/bg.jpg" alt="bg"></div>
+				<div class="contact__image-ibg"><picture><source srcset="img/bg.webp" type="image/webp"><img src="img/bg.jpg" alt="bg"></picture></div>
 			</section>
 
 	</div>
 	</main>
-	@@include('html/_footer.htm',{})
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__body">
+				<div class="footer__text">©2002 - 2022 Юридический центр «Фемида»</div>
+				<div class="footer__text">
+					Разработка и поддержка сайта <a href="https://lemakka.kz/" target="_blank" class="footer__text-link">ИП
+						"LEMAKKA"</a> </div>
+				<a href="img/policy.pdf" target="_blank" class="footer__text-link">Политика
+					конфиденциальности</a>
+			</div>
+
+		</div>
+	</footer>
 	</div>
-	@@include('html/_popup.htm',{})
-	@@include('html/_js.htm',{})
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=f0f96f2c-9220-4c32-b651-23ccc1413006
-	&lang=ru_RU"></script>
-	<script src="js/maps.js"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<div class="popup__text">
+					<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST" class="form form-popup">
+						<div class="form-popup__title">Получить консультацию</div>
+						<div class="form-callback__block">
+							<div class="popup__group">
+								<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя" placeholder="Ваше имя" class="input-popup form-callback__input" data-required="text">
+							</div>
+							<div class="popup__group">
+								<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона" placeholder="Ваш номер телефона" class="input-popup form-callback__input tel" data-required="tel">
+							</div>
+							<button type="submit" class="popup-btn button">Отправить</button>
+						</div>
+						<div class="popup-policy">
+							Оставляя заявку вы соглашаетесь с политикой обработки <a href="img/policy.pdf" target="_blank" class="policy_popup-link">персональных
+								данных</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Спасибо -->
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<div class="popup__text">
+					<div class="popup__send popup__title">Ваше <span>сообщение</span> отправлено!</div>
+					<div class="popup__send-text">Также вы можете написать нам в WhatsApp</div>
+					<div class="popup_social">
+						<button class="btn-social btn-social_whatsapp"> <a href="https://api.whatsapp.com/send?phone=+77777642704">
+								WhatsApp</a>
+						</button>
+					</div>
+					<div class="popup__send-text">или позвонить по номеру</div>
+					<a href="tel:+77056766766" class="popup__send-text-link">+7 777 764 27 04</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220310002518"></script>
+
+	<script>
+		window.addEventListener("DOMContentLoaded", function() {
+			[].forEach.call(document.querySelectorAll('.tel'), function(input) {
+				var keyCode;
+
+				function mask(event) {
+					event.keyCode && (keyCode = event.keyCode);
+					var pos = this.selectionStart;
+					if (pos < 3) event.preventDefault();
+					var matrix = "+7 (___) ___ ____",
+						i = 0,
+						def = matrix.replace(/\D/g, ""),
+						val = this.value.replace(/\D/g, ""),
+						new_value = matrix.replace(/[_\d]/g, function(a) {
+							return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+						});
+					i = new_value.indexOf("_");
+					if (i != -1) {
+						i < 5 && (i = 3);
+						new_value = new_value.slice(0, i)
+					}
+					var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+						function(a) {
+							return "\\d{1," + a.length + "}"
+						}).replace(/[+()]/g, "\\$&");
+					reg = new RegExp("^" + reg + "$");
+					if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value =
+						new_value;
+					if (event.type == "blur" && this.value.length < 5) this.value = ""
+				}
+
+				input.addEventListener("input", mask, false);
+				input.addEventListener("focus", mask, false);
+				input.addEventListener("blur", mask, false);
+				input.addEventListener("keydown", mask, false)
+
+			});
+
+		});
+	</script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220310002518"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=f0f96f2c-9220-4c32-b651-23ccc1413006&lang=ru_RU&_v=20220310002518"></script>
+	<script src="js/maps.js?_v=20220310002518"></script>
 
 </body>
 

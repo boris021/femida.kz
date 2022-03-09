@@ -3,33 +3,48 @@
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close">X</button>
 			<div class="popup__text">
-				<form action="#" class="form form-popup">
+				<form data-ajax data-popup-message="#form-message" action="sendmail.php" method="POST"
+					class="form form-popup">
 					<div class="form-popup__title">Получить консультацию</div>
-
 					<div class="form-callback__block">
 						<div class="popup__group">
-							<input autocomplete="off" type="text" data-error="Ошибка Введите имя" placeholder="Ваше имя"
-								class="input-popup form-callback__input" data-required="text">
+							<input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя"
+								placeholder="Ваше имя" class="input-popup form-callback__input" data-required="text">
 						</div>
 						<div class="popup__group">
-							<input autocomplete="off" type="tel" data-error="Ошибка Введите номер телефона"
-								placeholder="Ваш номер телефона" class="input-popup form-callback__input" data-required="tel">
+							<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона"
+								placeholder="Ваш номер телефона" class="input-popup form-callback__input tel"
+								data-required="tel">
 						</div>
 						<button type="submit" class="popup-btn button">Отправить</button>
 					</div>
-
-
-					<!-- <input autocomplete="on" type="text" name="text" data-error="Ошибка Введите имя" placeholder="Ваше имя"
-						class="input-popup" data-required="text">
-					<input autocomplete="off" type="tel" name="tel" data-error="Ошибка Введите номер телефона"
-						placeholder="Ваш номер телефона" class="input-popup" data-required="tel"> -->
-
 					<div class="popup-policy">
 						Оставляя заявку вы соглашаетесь с политикой обработки <a href="img/policy.pdf" target="_blank"
 							class="policy_popup-link">персональных
 							данных</a>
 					</div>
 				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Спасибо -->
+<div id="form-message" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">X</button>
+			<div class="popup__text">
+				<div class="popup__send popup__title">Ваше <span>сообщение</span> отправлено!</div>
+				<div class="popup__send-text">Также вы можете написать нам в WhatsApp</div>
+				<div class="popup_social">
+					<button class="btn-social btn-social_whatsapp"> <a
+							href="https://api.whatsapp.com/send?phone=+77777642704">
+							WhatsApp</a>
+					</button>
+				</div>
+				<div class="popup__send-text">или позвонить по номеру</div>
+				<a href="tel:+77056766766" class="popup__send-text-link">+7 777 764 27 04</a>
 			</div>
 		</div>
 	</div>
