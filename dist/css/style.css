@@ -1640,6 +1640,7 @@ body::after {
 }
 
 .client {
+  display: none;
   position: relative;
 }
 
@@ -1976,6 +1977,7 @@ body::after {
 }
 
 .question {
+  display: none;
   position: relative;
 }
 
